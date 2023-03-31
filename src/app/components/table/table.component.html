@@ -3,7 +3,7 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ayrton" #input>
 </mat-form-field> -->
 
-    <table mat-table [dataSource]="peoples" *ngIf="let people" matSort>
+    <table mat-table [dataSource]="peoples" matSort>
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
         <td mat-cell *matCellDef="let people">{{ people.fullName }}</td>
