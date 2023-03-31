@@ -1,0 +1,26 @@
+table{
+    font-family: 'Signika', sans-serif;
+}
+
+.ng-container {
+    background-color: black;
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.info {
+    color: #1B1B2F;
+}
+
+.remove {
+    margin-left: 5px;
+    color: red;
+}

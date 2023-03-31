@@ -1,0 +1,43 @@
+<!-- <mat-form-field>
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ayrton" #input>
+</mat-form-field> -->
+
+    <table mat-table [dataSource]="peoples" *ngIf="let people" matSort>
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+        <td mat-cell *matCellDef="let people">{{ people.fullName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="cpf">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>CPF</th>
+        <td mat-cell *matCellDef="let people">{{ people.cpf }}</td>
+      </ng-container>
+      <ng-container matColumnDef="telefone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Telefone</th>
+        <td mat-cell *matCellDef="let people">{{ people.phoneNumber }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ações</th>
+        <td mat-cell *matCellDef="let i = index" class="buttons">
+            <Button>
+                <mat-icon class="info">info</mat-icon>
+            </Button>
+            <Button (click)="remove(i)">
+                <mat-icon class="remove">delete</mat-icon>
+            </Button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let people; columns: displayedColumns"></tr>
+
+      <!-- <tr class="mat-row" *matNoDataRow>
+        <td mat-cell colspan="3">""{{input.value}}</td>
+    </tr> -->
+    </table>
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page of peoples"
+    ></mat-paginator>
+

@@ -1,4 +1,28 @@
-.footer-info {
+.footer-endereco {
     font-family: 'Signika', sans-serif;
     font-size: 15px;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.footer-icon__pge {
+    margin-top: 10px;
+}
+
+.footer-icon__codin {
+    margin-top: 4px;
+}
+
+.img-pge {
+    height: 100px;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #F2F2F2;
 }
